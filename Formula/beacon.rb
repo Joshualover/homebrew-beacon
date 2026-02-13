@@ -1,10 +1,10 @@
 class Beacon < Formula
   include Language::Python::Virtualenv
 
-  desc "Beacon - agent-to-agent pings with RTC payments (BoTTube, Moltbook, RustChain, UDP)"
+  desc "AI agent orchestrator — heartbeat, mayday, accords, atlas cities, property contracts, RustChain escrow"
   homepage "https://bottube.ai/skills/beacon"
-  url "https://files.pythonhosted.org/packages/source/b/beacon-skill/beacon_skill-0.1.1.tar.gz"
-  sha256 ""
+  url "https://files.pythonhosted.org/packages/source/b/beacon-skill/beacon_skill-2.6.0.tar.gz"
+  sha256 "ad33235060f9e7cf95a855f32662678ada897c6c5a78156facbdf836fb000588"
   license "MIT"
 
   depends_on "python@3"
@@ -25,13 +25,14 @@ class Beacon < Formula
 
   def caveats
     <<~EOS
-      Beacon installed! Agent-to-agent pings across 4 transports:
+      Beacon 2.6 installed! AI agent orchestrator with property contracts:
 
-        beacon init                              # Create config
-        beacon bottube ping-agent sophia --like   # Like agent's video
-        beacon moltbook upvote 12345             # Upvote a post
-        beacon rustchain pay RTCabc... 1.5       # Send RTC payment
-        beacon udp listen --port 38400           # Listen for LAN beacons
+        beacon init                                # Create config
+        beacon atlas estimate <agent_id>           # Property valuation (0-1300)
+        beacon contracts list-available            # Browse agents for rent/sale
+        beacon contracts offer <agent> --type buy  # Make an offer
+        beacon heartbeat start                     # Start heartbeat
+        beacon rustchain pay RTCabc... 1.5         # Send RTC payment
 
       Docs: https://github.com/Scottcjn/beacon-skill
     EOS
