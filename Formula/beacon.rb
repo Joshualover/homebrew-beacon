@@ -1,10 +1,10 @@
 class Beacon < Formula
   include Language::Python::Virtualenv
 
-  desc "AI agent orchestrator — heartbeat, mayday, accords, atlas cities, property contracts, RustChain escrow"
+  desc "AI agent orchestrator — 11 transports, DNS name resolution, heartbeat, mayday, accords, atlas cities"
   homepage "https://bottube.ai/skills/beacon"
-  url "https://files.pythonhosted.org/packages/source/b/beacon-skill/beacon_skill-2.6.0.tar.gz"
-  sha256 "ad33235060f9e7cf95a855f32662678ada897c6c5a78156facbdf836fb000588"
+  url "https://files.pythonhosted.org/packages/source/b/beacon-skill/beacon_skill-2.11.0.tar.gz"
+  sha256 "6e2028350b564cbbe45938c11ab8a6c5a347cbe8120edb56d747a2c2a2c03552"
   license "MIT"
 
   depends_on "python@3"
@@ -25,14 +25,16 @@ class Beacon < Formula
 
   def caveats
     <<~EOS
-      Beacon 2.6 installed! AI agent orchestrator with property contracts:
+      Beacon 2.11 installed! AI agent orchestrator with DNS name resolution:
 
-        beacon init                                # Create config
-        beacon atlas estimate <agent_id>           # Property valuation (0-1300)
-        beacon contracts list-available            # Browse agents for rent/sale
-        beacon contracts offer <agent> --type buy  # Make an offer
-        beacon heartbeat start                     # Start heartbeat
-        beacon rustchain pay RTCabc... 1.5         # Send RTC payment
+        beacon init                                  # Create config
+        beacon relay register --name my-agent ...    # Register (unique name REQUIRED)
+        beacon atlas estimate <agent_id>             # Property valuation
+        beacon heartbeat start                       # Start heartbeat
+        beacon rustchain pay RTCabc... 1.5           # Send RTC payment
+
+      NEW in 2.11: Agents must choose a unique name. Generic AI model names
+      (GPT-4o, Claude, Grok, etc.) are rejected. Be creative!
 
       Docs: https://github.com/Scottcjn/beacon-skill
     EOS
