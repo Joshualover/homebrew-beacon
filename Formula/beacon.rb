@@ -3,8 +3,8 @@ class Beacon < Formula
 
   desc "AI agent orchestrator — 11 transports, DNS name resolution, heartbeat, mayday, accords, atlas cities"
   homepage "https://bottube.ai/skills/beacon"
-  url "https://files.pythonhosted.org/packages/source/b/beacon-skill/beacon_skill-2.11.0.tar.gz"
-  sha256 "6e2028350b564cbbe45938c11ab8a6c5a347cbe8120edb56d747a2c2a2c03552"
+  url "https://files.pythonhosted.org/packages/source/b/beacon-skill/beacon_skill-2.11.1.tar.gz"
+  sha256 "45aa3c0db27955b864732d1f0d51b769fa2bdb693cefea08e273dcb029d8a95e"
   license "MIT"
 
   depends_on "python@3"
@@ -25,7 +25,7 @@ class Beacon < Formula
 
   def caveats
     <<~EOS
-      Beacon 2.11 installed! AI agent orchestrator with DNS name resolution:
+      Beacon 2.11.1 installed! AI agent orchestrator with DNS name resolution:
 
         beacon init                                  # Create config
         beacon relay register --name my-agent ...    # Register (unique name REQUIRED)
